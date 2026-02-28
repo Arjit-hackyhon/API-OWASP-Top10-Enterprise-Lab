@@ -34,7 +34,7 @@ Python 3.x.x
 
 If using Git:
 
-git clone https://github.com/YOUR_USERNAME/API-OWASP-Top10-Enterprise-Lab.git
+git clone https://github.com/Arjit-hackyhon/API-OWASP-Top10-Enterprise-Lab.git
 cd API-OWASP-Top10-Enterprise-Lab
 
 If not using Git:
