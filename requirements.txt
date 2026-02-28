@@ -1,1 +1,32 @@
+Flask==2.3.3
+PyJWT==2.11.0
+requests==2.31.0
+📦 What Each Package Does
 
+Flask → Runs the vulnerable API server
+
+PyJWT → Handles JWT token creation & decoding
+
+requests → Used for SSRF and external API calls
+
+🚀 How to Install
+
+After creating requirements.txt, run:
+
+pip install -r requirements.txt
+
+You should see packages installing without errors.
+
+🔎 Verify Installation
+
+Run:
+
+pip list
+
+You should see:
+
+Flask
+
+PyJWT
+
+requests
