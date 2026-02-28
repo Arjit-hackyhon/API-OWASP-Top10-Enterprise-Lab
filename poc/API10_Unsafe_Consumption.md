@@ -13,14 +13,14 @@ Server trusts external API response blindly.
   "api_url": "https://jsonplaceholder.typicode.com/todos/1"
 }
 
-✅ Result
+## ✅ Result
 
 External data processed without validation.
 
-📸 Screenshot
+## 📸 Screenshot
 
 Refer: screenshots/10_API10_Unsafe_API.png
 
-🚨 Impact
+## 🚨 Impact
 
 Data poisoning or injection risk.
