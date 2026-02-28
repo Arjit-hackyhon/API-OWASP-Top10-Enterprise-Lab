@@ -12,6 +12,7 @@ Server trusts external API response blindly.
 {
   "api_url": "https://jsonplaceholder.typicode.com/todos/1"
 }
+
 ✅ Result
 
 External data processed without validation.
