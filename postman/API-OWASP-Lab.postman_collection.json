@@ -1,1 +1,232 @@
+📦 FULL POSTMAN COLLECTION JSON
 
+{
+  "info": {
+    "name": "API OWASP Top 10 Enterprise Lab",
+    "_postman_id": "owasp-api-top10-lab",
+    "description": "Postman collection for testing OWASP API Top 10 vulnerabilities.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "API1 - BOLA - Get User 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/user/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["user", "1"]
+        }
+      }
+    },
+
+    {
+      "name": "API1 - BOLA - Get User 2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/user/2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["user", "2"]
+        }
+      }
+    },
+
+    {
+      "name": "API2 - SQL Injection Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"' OR 1=1 --\",\n  \"password\": \"anything\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/login",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      }
+    },
+
+    {
+      "name": "API3 - Normal Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"arjit\",\n  \"password\": \"password\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/login",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      }
+    },
+
+    {
+      "name": "API3 - Mass Assignment (Change Role)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer YOUR_TOKEN_HERE" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"role\": \"admin\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/update-profile",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["update-profile"]
+        }
+      }
+    },
+
+    {
+      "name": "API5 - Admin Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer YOUR_TOKEN_HERE" }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:5000/admin/dashboard",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["admin", "dashboard"]
+        }
+      }
+    },
+
+    {
+      "name": "API6 - Business Logic (Negative Transfer)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer YOUR_TOKEN_HERE" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": -1000\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/transfer",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["transfer"]
+        }
+      }
+    },
+
+    {
+      "name": "API7 - SSRF",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"http://127.0.0.1:5000/debug-info\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/fetch-url",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["fetch-url"]
+        }
+      }
+    },
+
+    {
+      "name": "API8 - Debug Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/debug-info",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["debug-info"]
+        }
+      }
+    },
+
+    {
+      "name": "API9 - Old API Version",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/v1/users",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["api", "v1", "users"]
+        }
+      }
+    },
+
+    {
+      "name": "API10 - Unsafe External API",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"api_url\": \"https://jsonplaceholder.typicode.com/todos/1\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/external-data",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["external-data"]
+        }
+      }
+    }
+
+  ]
+}
+🚀 How To Import Into Postman
+
+1️⃣ Open Postman
+2️⃣ Click Import
+3️⃣ Select the JSON file
+4️⃣ Done
+
+🔥 IMPORTANT
+
+For requests that say:
+
+Bearer YOUR_TOKEN_HERE
+
+Replace with real token from /login
