@@ -1,5 +1,3 @@
-📦 FULL POSTMAN COLLECTION JSON
-
 {
   "info": {
     "name": "API OWASP Top 10 Enterprise Lab",
@@ -216,17 +214,3 @@
 
   ]
 }
-🚀 How To Import Into Postman
-
-1️⃣ Open Postman
-2️⃣ Click Import
-3️⃣ Select the JSON file
-4️⃣ Done
-
-🔥 IMPORTANT
-
-For requests that say:
-
-Bearer YOUR_TOKEN_HERE
-
-Replace with real token from /login
